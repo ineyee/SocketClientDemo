@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zvg-7N-Uij">
+                                <rect key="frame" x="10" y="59" width="355" height="30"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.31372549020000001" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cVb-sl-S7I"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IK4-xL-PFV">
+                                <rect key="frame" x="172" y="97" width="31" height="30"/>
+                                <state key="normal" title="发送"/>
+                                <connections>
+                                    <action selector="send:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JI2-6v-0LY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPX-r6-gu6">
+                                <rect key="frame" x="172" y="182" width="31" height="30"/>
+                                <state key="normal" title="连接"/>
+                                <connections>
+                                    <action selector="connect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nXF-fy-C9v"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hsl-Bs-Dh7">
+                                <rect key="frame" x="172" y="243" width="31" height="30"/>
+                                <state key="normal" title="断开"/>
+                                <connections>
+                                    <action selector="disconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qM5-Nk-Qao"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="客户端socket" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agr-2T-xlB">
+                                <rect key="frame" x="136" y="607" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HPX-r6-gu6" firstAttribute="leading" secondItem="Hsl-Bs-Dh7" secondAttribute="leading" id="37Y-ja-xWu"/>
+                            <constraint firstItem="HPX-r6-gu6" firstAttribute="top" secondItem="IK4-xL-PFV" secondAttribute="bottom" constant="55" id="3BY-9C-Qsb"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hsl-Bs-Dh7" secondAttribute="trailing" constant="20" symbolic="YES" id="4oX-5a-39q"/>
+                            <constraint firstItem="agr-2T-xlB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Ca-PP-kbf"/>
+                            <constraint firstItem="IK4-xL-PFV" firstAttribute="leading" secondItem="HPX-r6-gu6" secondAttribute="leading" id="Cqr-bo-4I4"/>
+                            <constraint firstItem="IK4-xL-PFV" firstAttribute="top" secondItem="zvg-7N-Uij" secondAttribute="bottom" constant="8" symbolic="YES" id="DkO-bG-Qdd"/>
+                            <constraint firstItem="zvg-7N-Uij" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Ty3-H2-bWD"/>
+                            <constraint firstItem="zvg-7N-Uij" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="39" id="cRF-H6-c7K"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HPX-r6-gu6" secondAttribute="trailing" constant="20" symbolic="YES" id="eZR-19-IxQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="agr-2T-xlB" secondAttribute="bottom" constant="39" id="lJU-Uf-L7W"/>
+                            <constraint firstItem="Hsl-Bs-Dh7" firstAttribute="top" secondItem="HPX-r6-gu6" secondAttribute="bottom" constant="31" id="wGh-nJ-G3W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zvg-7N-Uij" secondAttribute="trailing" constant="10" id="wTO-2e-LIX"/>
+                            <constraint firstItem="zvg-7N-Uij" firstAttribute="centerX" secondItem="IK4-xL-PFV" secondAttribute="centerX" id="zeo-xi-pG3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tf" destination="zvg-7N-Uij" id="t0J-zF-kWM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="62" y="130"/>
+        </scene>
+    </scenes>
+</document>
